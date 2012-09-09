@@ -1,3 +1,3 @@
 Project Euler Problem 57
 =======================
-http://projecteuler.net/problems
+http://projecteuler.net/problem=57
