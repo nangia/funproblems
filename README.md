@@ -1,4 +1,4 @@
 funproblems
 ===========
 
-Solutions to various programmatic problems solved for fun sake.
+Various programmatic problems solved for fun sake.
