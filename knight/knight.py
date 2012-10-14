@@ -32,7 +32,10 @@ def comparisonfunction(n1, n2):
 	else:
 		return 0
 
-
+# Populate the map children
+# the Key value will be a tuple (x,y) corresponding to each node on the board
+# the Value of each key will be a tuple (count, list) where count is the number of children of 
+# that node and list is the list of children nodes (each node being a tuple (x,y)).
 def buildChildren():
 	for x in xrange(boardsize):
 		for y in xrange(boardsize):
@@ -55,15 +58,11 @@ def buildChildren():
 # This function expects a list of knight positions (a position is a tuple of (x,y) 
 # coordinates). Exits when it has found a knight's tour			
 def search(toursofar):
-	#print "---------------------------------------"
-	#print toursofar
-	#print depth
 	if len(toursofar) == boardsize * boardsize:
 		print toursofar
 		sys.exit(0)
 	else:
 		stoursofar = set(toursofar)
-		#print toursofar[-1]
 		(count, thechildren) = children[toursofar[-1]]
 		for c in thechildren:
 			if not (c in stoursofar):
@@ -72,7 +71,7 @@ def search(toursofar):
 				search(thecopy)
 				
 
-
+# build the map children 
 buildChildren()
-#print children.values()
-search( [ (0,0) ] )
+# now search starting from one node
+search( [ (0,0) ])
