@@ -19,7 +19,9 @@ def checkindexinresult(number, thelist):
     
 
 def computeresulthelper(numerator, denominator):
-    if (numerator >= denominator):
+    if numerator == denominator:
+        return [1, [], None]
+    if (numerator > denominator):
         nondecimalpart = numerator / denominator
         numerator = numerator - (nondecimalpart * denominator)
     else:
@@ -36,7 +38,19 @@ def computeresulthelper(numerator, denominator):
             else:
                 result.append([resultpart,remainder])
 
-def fractioncalculator(numerator, denominator):
+def numrepeating(numerator, denominator):
     [nondecimal, fraction, index] = computeresulthelper(numerator, denominator)
-        
-print computeresulthelper(1,49)
+    if index == None:
+        return 0
+    return len(fraction) - index
+       
+max = 0
+maxindex = -1
+
+for i in xrange(1,1000):
+    computeresulthelper(1,i)
+    cyclelen = numrepeating(1,i) 
+    if cyclelen > max:
+        max = cyclelen
+        maxindex = i
+print maxindex
