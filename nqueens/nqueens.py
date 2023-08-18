@@ -4,7 +4,7 @@ import copy
 
 #n x n square 
 
-#partial solution: [col1, col2, col3] i.e. queens are in position (0, Col1) , (0, Col2) ...
+#partial solution: [col1, col2, col3] i.e. queens are in position (0, Col1) , (1, Col2) ...
 # (x, y) = (row, col)
 
 
@@ -22,7 +22,6 @@ def conflict(row, col, partialsolution):
 		
 
 def children(partialsolution, size):
-
 	if partialsolution == None:
 		rowtofill = 0
 	else:
@@ -36,7 +35,7 @@ def children(partialsolution, size):
 def depthfirst(partialsolution, size, depth):
 	#print partialsolution, size, depth 
 	if partialsolution != None and (len(partialsolution) == size):
-		print partialsolution
+		print(partialsolution)
 	else:
 		for child in children(partialsolution,size):
 			if partialsolution == None:
