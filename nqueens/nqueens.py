@@ -1,13 +1,14 @@
 
 import copy
-#n queens 
+import argparse
 
-#n x n square 
+# n queens problem solution for n x n square chess board.
 
 #partial solution: [col1, col2, col3] i.e. queens are in position (0, Col1) , (1, Col2) ...
 # (x, y) = (row, col)
 
 
+# If we add another queen at position (row,col) will it conflict with the partialsolution?
 def conflict(row, col, partialsolution):
 	if partialsolution == None:
 		return False
@@ -21,6 +22,7 @@ def conflict(row, col, partialsolution):
 	return False
 		
 
+# yield the children of a particular board position
 def children(partialsolution, size):
 	if partialsolution == None:
 		rowtofill = 0
@@ -32,6 +34,7 @@ def children(partialsolution, size):
 		if not conflict(rowtofill, i, partialsolution):
 			yield i
 			
+# recursive depth first solution to search for n-queens problem
 def depthfirst(partialsolution, size, depth):
 	#print partialsolution, size, depth 
 	if partialsolution != None and (len(partialsolution) == size):
@@ -48,8 +51,14 @@ def depthfirst(partialsolution, size, depth):
 	
 	
 def nqueens(size):
-	emptylist = [1]
-	emptylist.remove(1)
+	emptylist = []
 	depthfirst(emptylist, size, 0)
-	
-nqueens(8)
+
+if __name__ == "__main__":
+	parser = argparse.ArgumentParser(description='Print solution to the nqueens problem')
+	parser.add_argument('boardsize', type=int, help='size of the board')
+	args = parser.parse_args()
+	if args.boardsize > 0:
+		nqueens(args.boardsize)
+
+
