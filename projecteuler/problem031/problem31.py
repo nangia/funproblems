@@ -28,5 +28,4 @@ count = 0
 for combination in coincombo(total, coins):
 	count += 1
 	#print combination
-print count
-	
+print(count)

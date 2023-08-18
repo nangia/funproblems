@@ -44,4 +44,4 @@ def dowork():
 		allsets[x] = set([])
 	for d in difference:
 		allsets[d[0]].add(d[1])
-	print allsets
+	print(allsets)

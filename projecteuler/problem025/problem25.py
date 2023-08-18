@@ -23,7 +23,7 @@ for fibnum in fibseq():
 	fibnumdigits = numdigits(fibnum)
 	term += 1
 	if  fibnumdigits >= 1000:
-		print term, fibnumdigits
+		print(term, fibnumdigits)
 		break
 	
 

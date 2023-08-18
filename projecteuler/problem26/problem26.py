@@ -53,4 +53,4 @@ for i in xrange(1,1000):
     if cyclelen > max:
         max = cyclelen
         maxindex = i
-print maxindex
+print(maxindex)

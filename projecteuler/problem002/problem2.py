@@ -16,4 +16,4 @@ for i in fibsequence():
 		break
 	if (i% 2 == 0):
 		sum+= i
-print sum	
+print(sum)

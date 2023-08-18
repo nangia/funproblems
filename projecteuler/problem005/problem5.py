@@ -21,5 +21,5 @@ def lcm(a,b):
 lcmsofar = 1
 for i in xrange(1,21):
     lcmsofar = lcm(lcmsofar, i)
-print lcmsofar
+print(lcmsofar)
     

@@ -31,5 +31,5 @@ num = 10001
 for aprime in primenumbergenerator():
     num -= 1
     if num == 0:
-        print aprime
+        print(aprime)
         break

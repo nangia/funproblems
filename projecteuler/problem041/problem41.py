@@ -74,7 +74,7 @@ for prime, primesquare in primenumberanditssquaregenerator():
         break
     if ispandigital(prime):
         lastprime = prime
-        print lastprime
+        print(lastprime)
 
-print lastprime
+print(lastprime)
     

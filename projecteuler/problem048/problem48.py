@@ -11,4 +11,4 @@ def pow(a,b):
 sum = 0
 for i in xrange(1,1001):
 	sum += pow(i,i)
-print sum % 10000000000
+print(sum % 10000000000)

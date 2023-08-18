@@ -48,7 +48,7 @@ if __name__ == "__main__":
 		if numofdigits(numerator) > numofdigits(denominator):
 			count += 1
 		num += 1
-	print count
+	print(count)
 		
 
 	

@@ -80,5 +80,5 @@ for year in xrange(1901, 2001):
 		if 6 == (dayDifference(1, month, year) % 7):
 			sunday_count += 1
 			
-print sunday_count
+print(sunday_count)
 

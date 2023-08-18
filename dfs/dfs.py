@@ -34,7 +34,7 @@ def assignmentiterator(cubelist, constraint):
 						
 def depthfirstsearch(cubelist, constraintlist):
 	if len(constraintlist) == 0:
-		print cubelist
+		print(cubelist)
 	else:
 		for assignment in assignmentiterator(cubelist, constraintlist[0]):
 			depthfirstsearch(assignment, constraintlist[1:])

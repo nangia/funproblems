@@ -86,7 +86,7 @@ def positionsaffected(grid, location):
 			
 def printallseq(seq):
 	for s in seq:
-		print s
+		print(s)
 
 
 		
@@ -146,7 +146,7 @@ grid03 = [
  
 #print grid03
 #thegrid = getGrid(grid03)
-print gridconstraintresolve(grid03)
+print(gridconstraintresolve(grid03))
 
 
 

@@ -36,4 +36,4 @@ for aprime, aprimesquare in primenumberanditssquaregenerator():
         break
     #print aprime
     sum += aprime
-print sum
+print(sum)

@@ -21,8 +21,7 @@ def isPythagoreanTriplet(a,b,c):
 for a, b, c in breakintothree(1000):
     
     if isPythagoreanTriplet(a,b,c):
-        #print a, b, c
-        print a * b * c
+        print(a * b * c)
             
     
             

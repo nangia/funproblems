@@ -59,7 +59,7 @@ def buildChildren():
 # coordinates). Exits when it has found a knight's tour			
 def search(toursofar):
 	if len(toursofar) == boardsize * boardsize:
-		print toursofar
+		print(toursofar)
 		sys.exit(0)
 	else:
 		stoursofar = set(toursofar)
